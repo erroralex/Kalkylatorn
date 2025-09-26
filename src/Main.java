@@ -93,7 +93,7 @@ public class Main {
         double sum = 0;
 
         for (int i = 0; i < temp; i++) {
-            System.out.println("Vilket tal vill du addera");
+            System.out.println("Vilket tal vill du addera?");
             try {
                 double number = scanner.nextDouble();
                 listOfNumbers.add(number); // addera nummer till listan
@@ -124,7 +124,7 @@ public class Main {
         double sum = 0;
 
         for (int i = 0; i < temp; i++) {
-            System.out.println("Vilket tal vill du subtrahera");
+            System.out.println("Vilket tal vill du subtrahera?");
             try {
                 double number = scanner.nextDouble();
                 if (i == 0) {
@@ -184,7 +184,46 @@ public class Main {
     }
 
     public static void division (Scanner scanner) {
+        clearScreen();
+        System.out.println("───────────────────────────────");
+        System.out.println("Välkommen till division!");
+        System.out.println("Hur många tal vill du dividera?");
+        System.out.println("───────────────────────────────");
+        System.out.println("Skriv in siffra och tryck ENTER:");
+        int temp = 0;
 
+        try {
+            temp = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            scanner.nextLine();
+
+        }
+        listOfNumbers.clear();
+        double sum = 0;
+
+        for (int i = 0; i < temp; i++) {
+            System.out.println("Vilket tal vill du dividera?");
+
+            try {
+                double number = scanner.nextDouble();
+                if (number == 0) {
+                    System.out.println("Du kan inte dela med noll!");
+                    break;
+                }else if (i == 0) {
+                    sum = number;
+                }else {
+                    sum = sum / number;
+                }
+                listOfNumbers.add(number); // addera nummer till listan
+            } catch (InputMismatchException e) {
+                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                scanner.nextLine();
+            }
+        }
+        System.out.println("───────────────────────────────");
+        System.out.println("Summan av dina tal är " + sum);
+        System.out.println("───────────────────────────────\n");
     }
 
     public static void modulus (Scanner scanner) {
