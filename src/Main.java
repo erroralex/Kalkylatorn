@@ -9,13 +9,13 @@ public class Main {
     public static int menuChoice;
     static Scanner scanner = new Scanner(System.in);
     public static List<Double> listOfNumbers = new ArrayList<>();
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void clearScreen() {
         for (int i = 0; i < 50; i++) {
             System.out.println();
         }
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void displayInputPrompt() {
         System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
         System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
@@ -32,12 +32,12 @@ public class Main {
         System.out.println("[2] Subtrahera tal med varandra");
         System.out.println("[3] Multiplicera tal med varandra");
         System.out.println("[4] Dividera tal med varandra");
-        System.out.println("[5] Kontrollera om ett tal är jämt delbart med X");
+        System.out.println("[5] Kontrollera modulus-rest av division");
         System.out.println("[6] Avsluta program");
         System.out.println("───────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER: ");
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void whatToDo() {
         menuChoice = scanner.nextInt();
 
@@ -77,7 +77,7 @@ public class Main {
                 break;
         }
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void addition (Scanner scanner) {
         clearScreen();
         System.out.println("Välkommen till addition! Hur många tal vill du addera?");
@@ -108,7 +108,7 @@ public class Main {
         System.out.println("───────────────────────────────\n");
 
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void subtraction (Scanner scanner) {
         clearScreen();
         System.out.println("Välkommen till subtraktion! Hur många tal vill du subtrahera?");
@@ -142,7 +142,7 @@ public class Main {
         System.out.println("Summan av dina tal är " + sum);
         System.out.println("───────────────────────────────\n");
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void multiplication (Scanner scanner) {
         clearScreen();
         System.out.println("───────────────────────────────");
@@ -182,7 +182,7 @@ public class Main {
         System.out.println("Summan av dina tal är " + sum);
         System.out.println("───────────────────────────────\n");
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void division (Scanner scanner) {
         clearScreen();
         System.out.println("───────────────────────────────");
@@ -225,11 +225,48 @@ public class Main {
         System.out.println("Summan av dina tal är " + sum);
         System.out.println("───────────────────────────────\n");
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void modulus (Scanner scanner) {
+        clearScreen();
+        System.out.println("─────────────────────────────────────────────────");
+        System.out.println("Välkommen till modulus! Här kan du se resten av ");
+        System.out.println("en divison. Vilket tal vill du börja med?");
+        System.out.println("─────────────────────────────────────────────────");
+        System.out.println("Skriv in siffra och tryck ENTER:");
 
+        double firstNumber = 0;
+        double secondNumber = 0;
+
+        try {
+            firstNumber = scanner.nextDouble();
+            if (firstNumber == 0) {
+                System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn.");
+                return;
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            scanner.nextLine();
+            return;
+        }
+        System.out.println("Vilket tal vill du dividera med?");
+        try {
+            secondNumber = scanner.nextDouble();
+                if (secondNumber == 0) {
+                    System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn.");
+                    return;
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                scanner.nextLine();
+                return;
+            }
+        double rest = firstNumber % secondNumber;
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Resten av modulus-division är " + rest);
+        System.out.println("────────────────────────────────────────");
     }
-
+//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void main(String[] args) {
 
         while (isRunning) {
