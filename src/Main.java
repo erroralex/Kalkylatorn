@@ -110,7 +110,37 @@ public class Main {
     }
 
     public static void subtraction (Scanner scanner) {
+        clearScreen();
+        System.out.println("Välkommen till subtraktion! Hur många tal vill du subtrahera?");
+        int temp = 0;
+        try {
+            temp = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            scanner.nextLine();
 
+        }
+        listOfNumbers.clear();
+        double sum = 0;
+
+        for (int i = 0; i < temp; i++) {
+            System.out.println("Vilket tal vill du subtrahera");
+            try {
+                double number = scanner.nextDouble();
+                if (i == 0) {
+                    sum = number;
+                } else {
+                    sum -= number;
+                }
+                listOfNumbers.add(number); // addera nummer till listan
+            } catch (InputMismatchException e) {
+                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                scanner.nextLine();
+            }
+        }
+        System.out.println("───────────────────────────────");
+        System.out.println("Summan av dina tal är " + sum);
+        System.out.println("───────────────────────────────\n");
     }
 
     public static void multiplication (Scanner scanner) {
