@@ -1,4 +1,4 @@
-# Kalkylator
+# Kalkylatorn
 
 ## Översikt
 Det här GitHub-repot innehåller ett Java-projekt för en enkel kalkylator som utför grundläggande matematiska beräkningar: addition, subtraktion, multiplikation och division. 
