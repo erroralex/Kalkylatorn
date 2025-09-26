@@ -27,14 +27,14 @@ public class Main {
         System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
         System.out.println("Välkommen till Kalkylatorn!");
         System.out.println("Vad vill du göra?");
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("\n[1] Addera tal med varandra");
         System.out.println("[2] Subtrahera tal med varandra");
         System.out.println("[3] Multiplicera tal med varandra");
         System.out.println("[4] Dividera tal med varandra");
         System.out.println("[5] Kontrollera modulus-rest av division");
         System.out.println("[6] Avsluta program");
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER: ");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -57,11 +57,11 @@ public class Main {
             case 3:
                 multiplication(scanner);
                 break;
-
+            //Dividera tal
             case 4:
                 division(scanner);
                 break;
-
+            //Modulus
             case 5:
                 modulus(scanner);
                 break;
@@ -103,9 +103,9 @@ public class Main {
                 scanner.nextLine();
             }
         }
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
-        System.out.println("───────────────────────────────\n");
+        System.out.println("────────────────────────────────────────\n");
 
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -138,17 +138,17 @@ public class Main {
                 scanner.nextLine();
             }
         }
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
-        System.out.println("───────────────────────────────\n");
+        System.out.println("────────────────────────────────────────\n");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void multiplication (Scanner scanner) {
         clearScreen();
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Välkommen till multiplikation!");
         System.out.println("Hur många tal vill du multiplicera?");
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER:");
         int temp = 0;
 
@@ -178,17 +178,17 @@ public class Main {
                 scanner.nextLine();
             }
         }
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
-        System.out.println("───────────────────────────────\n");
+        System.out.println("────────────────────────────────────────\n");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void division (Scanner scanner) {
         clearScreen();
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Välkommen till division!");
         System.out.println("Hur många tal vill du dividera?");
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER:");
         int temp = 0;
 
@@ -221,9 +221,9 @@ public class Main {
                 scanner.nextLine();
             }
         }
-        System.out.println("───────────────────────────────");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
-        System.out.println("───────────────────────────────\n");
+        System.out.println("────────────────────────────────────────\n");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void modulus (Scanner scanner) {
