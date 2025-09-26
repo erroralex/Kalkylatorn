@@ -9,7 +9,7 @@ Den ger användaren möjlighet att välja vilken typ av beräkning de vill göra
 2. **Subtraktion**: Användaren kan ange hur många tal de vill subtrahera tillsammans.
 3. **Multiplikation**: Användaren kan ange hur många tal de vill multiplicera tillsammans.
 4. **Division**: Användaren kan ange hur många tal de vill dividera tillsammans.
-5. **Modulus (Rest av division)**: Användaren kan ange två tal för att se resten av en division.
+5. **Modulus (Rest av division)**: Användaren kan ange hur många tal de vill för att se resten av en division.
 
 ## Struktur
 Koden är uppbyggd på följande sätt:
