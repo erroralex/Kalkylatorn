@@ -81,7 +81,10 @@ public class Main {
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void addition (Scanner scanner) {
         clearScreen();
-        System.out.println("Välkommen till addition! Hur många tal vill du addera?");
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Välkommen till addition! \nHur många tal vill du addera?");
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Skriv in siffra och tryck ENTER:");
         int temp = 0;
         try {
             temp = scanner.nextInt();
@@ -113,7 +116,10 @@ public class Main {
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void subtraction (Scanner scanner) {
         clearScreen();
-        System.out.println("Välkommen till subtraktion! Hur många tal vill du subtrahera?");
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Välkommen till subtraktion! Hur många \ntal vill du subtrahera?");
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Skriv in siffra och tryck ENTER:");
         int temp = 0;
         try {
             temp = scanner.nextInt();
@@ -274,7 +280,7 @@ public class Main {
             }
         }
         System.out.println("────────────────────────────────────────");
-        System.out.println("Resten av division av dina tal är " + sum);
+        System.out.println("Resten av division utav dina tal är " + sum);
         System.out.println("────────────────────────────────────────\n");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
