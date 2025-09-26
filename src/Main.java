@@ -73,7 +73,8 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Du måste mata in en korrekt siffra för ditt val! Försök igen.");
+                System.out.println("Du måste mata in en korrekt siffra för ditt val! Försök igen. Tryck [ENTER] ");
+                scanner.nextLine();
                 break;
         }
     }
@@ -85,8 +86,9 @@ public class Main {
         try {
             temp = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
             scanner.nextLine();
+            return;
 
         }
         listOfNumbers.clear();
@@ -99,14 +101,14 @@ public class Main {
                 listOfNumbers.add(number); // addera nummer till listan
                 sum = number + sum;
             } catch (InputMismatchException e) {
-                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
                 scanner.nextLine();
+                return;
             }
         }
         System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
         System.out.println("────────────────────────────────────────\n");
-
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void subtraction (Scanner scanner) {
@@ -116,9 +118,9 @@ public class Main {
         try {
             temp = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
             scanner.nextLine();
-
+            return;
         }
         listOfNumbers.clear();
         double sum = 0;
@@ -134,8 +136,9 @@ public class Main {
                 }
                 listOfNumbers.add(number); // addera nummer till listan
             } catch (InputMismatchException e) {
-                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
                 scanner.nextLine();
+                return;
             }
         }
         System.out.println("────────────────────────────────────────");
@@ -155,8 +158,9 @@ public class Main {
         try {
             temp = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
             scanner.nextLine();
+            return;
 
         }
         listOfNumbers.clear();
@@ -174,8 +178,9 @@ public class Main {
                 }
                 listOfNumbers.add(number); // addera nummer till listan
             } catch (InputMismatchException e) {
-                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
                 scanner.nextLine();
+                return;
             }
         }
         System.out.println("────────────────────────────────────────");
@@ -195,9 +200,9 @@ public class Main {
         try {
             temp = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
             scanner.nextLine();
-
+            return;
         }
         listOfNumbers.clear();
         double sum = 0;
@@ -208,8 +213,9 @@ public class Main {
             try {
                 double number = scanner.nextDouble();
                 if (number == 0) {
-                    System.out.println("Du kan inte dela med noll!");
-                    break;
+                    System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn. Tryck [ENTER] ");
+                    scanner.nextLine();
+                    return;
                 }else if (i == 0) {
                     sum = number;
                 }else {
@@ -217,8 +223,9 @@ public class Main {
                 }
                 listOfNumbers.add(number); // addera nummer till listan
             } catch (InputMismatchException e) {
-                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
                 scanner.nextLine();
+                return;
             }
         }
         System.out.println("────────────────────────────────────────");
@@ -228,43 +235,47 @@ public class Main {
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void modulus (Scanner scanner) {
         clearScreen();
-        System.out.println("─────────────────────────────────────────────────");
-        System.out.println("Välkommen till modulus! Här kan du se resten av ");
-        System.out.println("en divison. Vilket tal vill du börja med?");
-        System.out.println("─────────────────────────────────────────────────");
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Välkommen till modulus! Här visas rest av ");
+        System.out.println("divisioner. Hur många tal vill du dividera?");
+        System.out.println("────────────────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER:");
-
-        double firstNumber = 0;
-        double secondNumber = 0;
+        int temp = 0;
 
         try {
-            firstNumber = scanner.nextDouble();
-            if (firstNumber == 0) {
-                System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn.");
-                return;
-            }
+            temp = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
             scanner.nextLine();
             return;
         }
-        System.out.println("Vilket tal vill du dividera med?");
-        try {
-            secondNumber = scanner.nextDouble();
-                if (secondNumber == 0) {
-                    System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn.");
-                    return;
-                }
+        listOfNumbers.clear();
+        double sum = 0;
 
+        for (int i = 0; i < temp; i++) {
+            System.out.println("Vilket tal vill du dividera?");
+
+            try {
+                double number = scanner.nextDouble();
+                if (number == 0) {
+                    System.out.println("Du kan inte dela med noll! Tar dig tillbaka till menyn. Tryck [ENTER] ");
+                    scanner.nextLine();
+                    return;
+                }else if (i == 0) {
+                    sum = number;
+                }else {
+                    sum = sum % number;
+                }
+                listOfNumbers.add(number); // addera nummer till listan
             } catch (InputMismatchException e) {
-                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                System.out.println("Ogiltlig inmatning! Tar dig tillbaka till menyn. Tryck [ENTER] ");
                 scanner.nextLine();
                 return;
             }
-        double rest = firstNumber % secondNumber;
+        }
         System.out.println("────────────────────────────────────────");
-        System.out.println("Resten av modulus-division är " + rest);
-        System.out.println("────────────────────────────────────────");
+        System.out.println("Resten av division av dina tal är " + sum);
+        System.out.println("────────────────────────────────────────\n");
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void main(String[] args) {
@@ -274,7 +285,8 @@ public class Main {
             try {
                 whatToDo();
             } catch (InputMismatchException ex) {
-                System.out.println("Ogiltlig inmatning, var vänlig och använd ett korrekt värde!");
+                System.out.println("Ogiltlig inmatning, var vänlig och använd ett korrekt värde! Tryck [ENTER] ");
+                scanner.nextLine();
             }
             scanner.nextLine();
         }
