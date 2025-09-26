@@ -79,6 +79,33 @@ public class Main {
     }
 
     public static void addition (Scanner scanner) {
+        clearScreen();
+        System.out.println("Välkommen till addition! Hur många tal vill du addera?");
+        int temp = 0;
+        try {
+            temp = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+            scanner.nextLine();
+
+        }
+        listOfNumbers.clear();
+        double sum = 0;
+
+        for (int i = 0; i < temp; i++) {
+            System.out.println("Vilket tal vill du addera");
+            try {
+                double number = scanner.nextDouble();
+                listOfNumbers.add(number); // addera nummer till listan
+                sum = number + sum;
+            } catch (InputMismatchException e) {
+                System.out.println("Ogiltlig inmatning! Var vänlig skriv in en siffra.");
+                scanner.nextLine();
+            }
+        }
+        System.out.println("───────────────────────────────");
+        System.out.println("Summan av dina tal är " + sum);
+        System.out.println("───────────────────────────────\n");
 
     }
 
