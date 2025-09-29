@@ -9,14 +9,16 @@ public class Main {
     public static int menuChoice;
     static Scanner scanner = new Scanner(System.in);
     public static List<Double> listOfNumbers = new ArrayList<>();
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void clearScreen() {
         for (int i = 0; i < 50; i++) {
             System.out.println();
         }
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    public static void logoDisplay () {
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void logoDisplay() {
         System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
         System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
         System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
@@ -26,7 +28,8 @@ public class Main {
         System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
         System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void displayInputPrompt() {
         clearScreen();
         logoDisplay();
@@ -42,7 +45,8 @@ public class Main {
         System.out.println("────────────────────────────────────────");
         System.out.println("Skriv in siffra och tryck ENTER: ");
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void whatToDo() {
         menuChoice = scanner.nextInt();
 
@@ -83,8 +87,9 @@ public class Main {
                 break;
         }
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    public static void addition (Scanner scanner) {
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void addition(Scanner scanner) {
         clearScreen();
         logoDisplay();
         System.out.println("Välkommen till addition! Hur många tal vill du addera?");
@@ -94,9 +99,13 @@ public class Main {
         // Kontrollerar inmatning på antal
         while (true) {
             try {
-            temp = scanner.nextInt();
-            break;
-        } catch (InputMismatchException e) {
+                temp = scanner.nextInt();
+                if (temp <= 0) {
+                    System.out.println("Ogiltlig inmatning! Du måste ange ett positivt heltal.");
+                    break;
+                }
+                break;
+            } catch (InputMismatchException e) {
                 System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
                 scanner.nextLine();
             }
@@ -125,8 +134,9 @@ public class Main {
         System.out.println("────────────────────────────────────────\n");
         scanner.nextLine();
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    public static void subtraction (Scanner scanner) {
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void subtraction(Scanner scanner) {
         clearScreen();
         logoDisplay();
         System.out.println("Välkommen till subtraktion! Hur många tal vill du subtrahera?");
@@ -137,6 +147,10 @@ public class Main {
         while (true) {
             try {
                 temp = scanner.nextInt();
+                if (temp <= 0) {
+                    System.out.println("Ogiltlig inmatning! Du måste ange ett positivt heltal.");
+                    break;
+                }
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
@@ -171,8 +185,9 @@ public class Main {
         System.out.println("────────────────────────────────────────\n");
         scanner.nextLine();
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    public static void multiplication (Scanner scanner) {
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void multiplication(Scanner scanner) {
         clearScreen();
         logoDisplay();
         System.out.println("Välkommen till multiplikation! Hur många tal vill du multiplicera?");
@@ -183,6 +198,10 @@ public class Main {
         while (true) {
             try {
                 temp = scanner.nextInt();
+                if (temp <= 0) {
+                    System.out.println("Ogiltlig inmatning! Du måste ange ett positivt heltal.");
+                    break;
+                }
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
@@ -217,73 +236,79 @@ public class Main {
         System.out.println("────────────────────────────────────────\n");
         scanner.nextLine();
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-public static void division (Scanner scanner) {
-    clearScreen();
-    logoDisplay();
-    System.out.println("Välkommen till division! Hur många tal vill du dividera?");
-    System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
-    System.out.print("Skriv in siffra och tryck [ENTER]: ");
 
-    int temp = 0;
-    // Kontrollerar inmatning på antal
-    while (true) {
-        try {
-            temp = scanner.nextInt();
-            break;
-        } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
-            scanner.nextLine();
-        }
-    }
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void division(Scanner scanner) {
+        clearScreen();
+        logoDisplay();
+        System.out.println("Välkommen till division! Hur många tal vill du dividera?");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.print("Skriv in siffra och tryck [ENTER]: ");
 
-    listOfNumbers.clear();
-    double sum;
-
-    while (true) {
-        try {
-            System.out.print("Ange det första talet att dividera med: ");
-            sum = scanner.nextDouble();
-            if (sum == 0) {
-                System.out.println("Du kan inte dela med noll! Ange en siffra och [ENTER] för att fortsätta: ");
-                continue;
-            }
-            listOfNumbers.add(sum); // addera nummer till listan
-            break;
-        } catch (InputMismatchException e) {
-            System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
-            scanner.nextLine();
-        }
-    }
-
-    for (int i = 1; i < temp; i++) {
-        double divisor;
-        // Kontrollerar inmatning på talen
+        int temp = 0;
+        // Kontrollerar inmatning på antal
         while (true) {
             try {
-                System.out.println("Vilket tal vill du dividera med?");
-                divisor = scanner.nextDouble();
-                if (divisor == 0) {
-                    System.out.println("Du kan inte dela med noll! Ange en siffra och [ENTER] för att fortsätta: ");
-                    continue;
+                temp = scanner.nextInt();
+                if (temp <= 0) {
+                    System.out.println("Ogiltlig inmatning! Du måste ange ett positivt heltal.");
+                    break;
                 }
-                sum /= divisor;
-                listOfNumbers.add(divisor); // addera nummer till listan
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
                 scanner.nextLine();
             }
         }
+
+        listOfNumbers.clear();
+        double sum;
+
+        while (true) {
+            try {
+                System.out.print("Ange det första talet att dividera med: ");
+                sum = scanner.nextDouble();
+                if (sum == 0) {
+                    System.out.println("Du kan inte dela med noll! Ange en siffra och [ENTER] för att fortsätta: ");
+                    continue;
+                }
+                listOfNumbers.add(sum); // addera nummer till listan
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
+                scanner.nextLine();
+            }
+        }
+
+        for (int i = 1; i < temp; i++) {
+            double divisor;
+            // Kontrollerar inmatning på talen
+            while (true) {
+                try {
+                    System.out.println("Vilket tal vill du dividera med?");
+                    divisor = scanner.nextDouble();
+                    if (divisor == 0) {
+                        System.out.println("Du kan inte dela med noll! Ange en siffra och [ENTER] för att fortsätta: ");
+                        continue;
+                    }
+                    sum /= divisor;
+                    listOfNumbers.add(divisor); // addera nummer till listan
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
+                    scanner.nextLine();
+                }
+            }
+        }
+        System.out.println("────────────────────────────────────────");
+        System.out.println("Summan av dina tal är " + sum);
+        System.out.println("[ENTER] för att återgå till menyn");
+        System.out.println("────────────────────────────────────────\n");
+        scanner.nextLine();
     }
-    System.out.println("────────────────────────────────────────");
-    System.out.println("Summan av dina tal är " + sum);
-    System.out.println("[ENTER] för att återgå till menyn");
-    System.out.println("────────────────────────────────────────\n");
-    scanner.nextLine();
-}
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-    public static void modulus (Scanner scanner) {
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    public static void modulus(Scanner scanner) {
         clearScreen();
         logoDisplay();
         System.out.println("Välkommen till modulus! Här visas restvärde av divisioner. Hur många tal vill du dividera?");
@@ -295,6 +320,10 @@ public static void division (Scanner scanner) {
         while (true) {
             try {
                 temp = scanner.nextInt();
+                if (temp <= 0) {
+                    System.out.println("Ogiltlig inmatning! Du måste ange ett positivt heltal.");
+                    break;
+                }
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Ogiltlig inmatning! Ange en siffra och [ENTER] för att fortsätta: ");
@@ -338,7 +367,8 @@ public static void division (Scanner scanner) {
         System.out.println("────────────────────────────────────────\n");
         scanner.nextLine();
     }
-//──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+    //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void main(String[] args) {
 
         while (isRunning) {
