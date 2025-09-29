@@ -17,6 +17,7 @@ public class Main {
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void displayInputPrompt() {
+        clearScreen();
         System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
         System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
         System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
@@ -81,10 +82,17 @@ public class Main {
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void addition (Scanner scanner) {
         clearScreen();
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Välkommen till addition! \nHur många tal vill du addera?");
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Skriv in siffra och tryck ENTER:");
+        System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
+        System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
+        System.out.println("█████╔╝ ███████║██║     █████╔╝  ╚████╔╝ ██║     ███████║   ██║   ██║   ██║██████╔╝██╔██╗ ██║");
+        System.out.println("██╔═██╗ ██╔══██║██║     ██╔═██╗   ╚██╔╝  ██║     ██╔══██║   ██║   ██║   ██║██╔══██╗██║╚██╗██║");
+        System.out.println("██║  ██╗██║  ██║███████╗██║  ██╗   ██║   ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║██║ ╚████║");
+        System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("Välkommen till addition! Hur många tal vill du addera?");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.print("Skriv in siffra och tryck [ENTER]: ");
         int temp = 0;
         // Kontrollerar inmatning på antal
         while (true) {
@@ -116,15 +124,24 @@ public class Main {
         }
         System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
+        System.out.println("[ENTER] för att återgå till menyn");
         System.out.println("────────────────────────────────────────\n");
+        scanner.nextLine();
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void subtraction (Scanner scanner) {
         clearScreen();
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Välkommen till subtraktion! Hur många \ntal vill du subtrahera?");
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Skriv in siffra och tryck ENTER:");
+        System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
+        System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
+        System.out.println("█████╔╝ ███████║██║     █████╔╝  ╚████╔╝ ██║     ███████║   ██║   ██║   ██║██████╔╝██╔██╗ ██║");
+        System.out.println("██╔═██╗ ██╔══██║██║     ██╔═██╗   ╚██╔╝  ██║     ██╔══██║   ██║   ██║   ██║██╔══██╗██║╚██╗██║");
+        System.out.println("██║  ██╗██║  ██║███████╗██║  ██╗   ██║   ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║██║ ╚████║");
+        System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("Välkommen till subtraktion! Hur många tal vill du subtrahera?");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.print("Skriv in siffra och tryck [ENTER]: ");
         int temp = 0;
         // Kontrollerar inmatning på antal
         while (true) {
@@ -160,16 +177,24 @@ public class Main {
         }
         System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
+        System.out.println("[ENTER] för att återgå till menyn");
         System.out.println("────────────────────────────────────────\n");
+        scanner.nextLine();
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void multiplication (Scanner scanner) {
         clearScreen();
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Välkommen till multiplikation!");
-        System.out.println("Hur många tal vill du multiplicera?");
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Skriv in siffra och tryck ENTER:");
+        System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
+        System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
+        System.out.println("█████╔╝ ███████║██║     █████╔╝  ╚████╔╝ ██║     ███████║   ██║   ██║   ██║██████╔╝██╔██╗ ██║");
+        System.out.println("██╔═██╗ ██╔══██║██║     ██╔═██╗   ╚██╔╝  ██║     ██╔══██║   ██║   ██║   ██║██╔══██╗██║╚██╗██║");
+        System.out.println("██║  ██╗██║  ██║███████╗██║  ██╗   ██║   ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║██║ ╚████║");
+        System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("Välkommen till multiplikation! Hur många tal vill du multiplicera?");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.print("Skriv in siffra och tryck [ENTER]: ");
         int temp = 0;
         // Kontrollerar inmatning på antal
         while (true) {
@@ -205,16 +230,24 @@ public class Main {
         }
         System.out.println("────────────────────────────────────────");
         System.out.println("Summan av dina tal är " + sum);
+        System.out.println("[ENTER] för att återgå till menyn");
         System.out.println("────────────────────────────────────────\n");
+        scanner.nextLine();
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 public static void division (Scanner scanner) {
     clearScreen();
-    System.out.println("────────────────────────────────────────");
-    System.out.println("Välkommen till division!");
-    System.out.println("Hur många tal vill du dividera?");
-    System.out.println("────────────────────────────────────────");
-    System.out.println("Skriv in siffra och tryck ENTER:");
+    System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
+    System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
+    System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
+    System.out.println("█████╔╝ ███████║██║     █████╔╝  ╚████╔╝ ██║     ███████║   ██║   ██║   ██║██████╔╝██╔██╗ ██║");
+    System.out.println("██╔═██╗ ██╔══██║██║     ██╔═██╗   ╚██╔╝  ██║     ██╔══██║   ██║   ██║   ██║██╔══██╗██║╚██╗██║");
+    System.out.println("██║  ██╗██║  ██║███████╗██║  ██╗   ██║   ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║██║ ╚████║");
+    System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
+    System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+    System.out.println("Välkommen till division! Hur många tal vill du dividera?");
+    System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+    System.out.print("Skriv in siffra och tryck [ENTER]: ");
 
     int temp = 0;
     // Kontrollerar inmatning på antal
@@ -269,16 +302,24 @@ public static void division (Scanner scanner) {
     }
     System.out.println("────────────────────────────────────────");
     System.out.println("Summan av dina tal är " + sum);
+    System.out.println("[ENTER] för att återgå till menyn");
     System.out.println("────────────────────────────────────────\n");
+    scanner.nextLine();
 }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void modulus (Scanner scanner) {
         clearScreen();
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Välkommen till modulus! Här visas rest av ");
-        System.out.println("divisioner. Hur många tal vill du dividera?");
-        System.out.println("────────────────────────────────────────");
-        System.out.println("Skriv in siffra och tryck ENTER:");
+        System.out.println("\n─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("██╗  ██╗ █████╗ ██╗     ██╗  ██╗██╗   ██╗██╗      █████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗");
+        System.out.println("██║ ██╔╝██╔══██╗██║     ██║ ██╔╝╚██╗ ██╔╝██║     ██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗████╗  ██║");
+        System.out.println("█████╔╝ ███████║██║     █████╔╝  ╚████╔╝ ██║     ███████║   ██║   ██║   ██║██████╔╝██╔██╗ ██║");
+        System.out.println("██╔═██╗ ██╔══██║██║     ██╔═██╗   ╚██╔╝  ██║     ██╔══██║   ██║   ██║   ██║██╔══██╗██║╚██╗██║");
+        System.out.println("██║  ██╗██║  ██║███████╗██║  ██╗   ██║   ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║██║ ╚████║");
+        System.out.println("╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.println("Välkommen till modulus! Här visas restvärde av divisioner. Hur många tal vill du dividera?");
+        System.out.println("─────────────────────────────────────────────────────────────────────────────────────────────");
+        System.out.print("Skriv in siffra och tryck [ENTER]: ");
 
         int temp;
         // Kontrollerar inmatning på antal
@@ -324,7 +365,9 @@ public static void division (Scanner scanner) {
 
         System.out.println("────────────────────────────────────────");
         System.out.println("Resten av division utav dina tal är " + remainder);
+        System.out.println("[ENTER] för att återgå till menyn");
         System.out.println("────────────────────────────────────────\n");
+        scanner.nextLine();
     }
 //──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     public static void main(String[] args) {
