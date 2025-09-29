@@ -1,7 +1,7 @@
 # Kalkylatorn
 
 ## Översikt
-Det här GitHub-repot innehåller ett Java-projekt för en enkel kalkylator som utför grundläggande matematiska beräkningar: addition, subtraktion, multiplikation och division. 
+Det här GitHub-repot innehåller ett Java-projekt för en enkel kalkylator som utför grundläggande matematiska beräkningar: addition, subtraktion, multiplikation, division och modulus rest. 
 Den ger användaren möjlighet att välja vilken typ av beräkning de vill göra genom en interaktiv meny.
 
 ## Funktioner
@@ -16,9 +16,10 @@ Koden är uppbyggd på följande sätt:
 
 1. **Main.java**: Huvudklassen som innehåller huvudloopen och användersscenariot.
 2. **clearScreen()**: Metod för att rensa skärmen.
-3. **displayInputPrompt()**: Metod för att visa menyn med alternativ för användaren.
-4. **whatToDo()**: Metod för att hantera användarnas val och anropa de olika beräkningarna.
-5. **addition**, **subtraction**, **multiplication**, **division**, och **modulus**: Metoder för att utföra de olika matematiska operationerna.
+3. **logoDisplay()**: Metod för att skriva ut logotyp.
+4. **displayInputPrompt()**: Metod för att visa menyn med alternativ för användaren.
+5. **whatToDo()**: Metod för att hantera användarnas val och anropa de olika beräkningarna.
+6. **addition**, **subtraction**, **multiplication**, **division**, och **modulus**: Metoder för att utföra de olika matematiska operationerna.
 
 ## Bidrag
 Tomas Wigell har blivit inbjuden till projektet som collaborator och kan hjälpa med funderingar eller problemlösning om det behövs.
